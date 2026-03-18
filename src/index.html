@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="/main.js"></script>
+    <title>TauriWinTools</title>
+  </head>
+  <body class="dark:bg-[#36393f] dark:text-white">
+    <h1 class="text-center">TauriWinTools</h1>
+
+    <dialog
+      id="dialog"
+      class="dark:bg-[#18191b] dark:text-white shadow-2xl shadow-blue-900 m-auto *:m-5 *:rounded-lg *:text-center"
+    >
+      <div class="grid">
+        <h2>Captive Portal / Public Wi-Fi Login Page</h2>
+        <p>Choose any of these</p>
+        <button><a href="http://neverssl.com">NeverSSL</a></button>
+        <button>
+          <a href="http://www.msftconnecttest.com/connecttest.txt">Microsoft</a>
+        </button>
+        <button>
+          <a href="http://connectivitycheck.gstatic.com/generate_204">Google</a>
+        </button>
+        <button><a href="http://captive.apple.com">Apple</a></button>
+        <button>
+          <a href="http://detectportal.firefox.com/canonical.html">Mozilla</a>
+        </button>
+        <button>
+          <a href="http://network-test.debian.org/nm">Debian</a>
+        </button>
+        <button onclick="document.getElementById('dialog').close()">
+          Close
+        </button>
+      </div>
+    </dialog>
+
+    <div class="md:columns-2">
+      <section>
+        <h2>Files and Folders:</h2>
+        <button
+          onclick="
+            run_process(
+              'notepad.exe',
+              'C:\\Windows\\System32\\drivers\\etc\\hosts',
+              true,
+            )
+          "
+        >
+          Open Hosts File
+        </button>
+        <button
+          onclick="
+            run_process(
+              'cmd.exe',
+              '/c explorer.exe %AppData%\\Microsoft\\AddIns\\',
+              false,
+            )
+          "
+        >
+          Open Office Addins Folder
+        </button>
+        <button
+          onclick="
+            run_process(
+              'cmd.exe',
+              '/c explorer.exe %AppData%\\Microsoft\\Windows\\Start Menu',
+              false,
+            )
+          "
+        >
+          Open Current User Start Menu Folder
+        </button>
+        <button
+          onclick="
+            run_process(
+              'cmd.exe',
+              '/c explorer.exe %ProgramData%\\Microsoft\\Windows\\Start Menu',
+              false,
+            )
+          "
+        >
+          Open All Users Start Menu Folder
+        </button>
+        <button
+          onclick="
+            run_process(
+              'cmd.exe',
+              '/c explorer.exe %APPDATA%\\Microsoft\\Windows\\SendTo',
+              false,
+            )
+          "
+        >
+          Open SentTo Folder
+        </button>
+        <button
+          onclick="
+            run_process(
+              'cmd.exe',
+              '/c explorer.exe %APPDATA%\\Microsoft\\Windows\\Start Menu\\Programs\\Startup',
+              false,
+            )
+          "
+        >
+          Open Current User Startup Folder
+        </button>
+        <button
+          onclick="
+            run_process(
+              'cmd.exe',
+              '/c explorer.exe %ProgramData%\\Microsoft\\Windows\\Start Menu\\Programs\\Startup',
+              false,
+            )
+          "
+        >
+          Open All Users Startup Folder
+        </button>
+        <button
+          onclick="
+            run_process(
+              'cmd.exe',
+              '/c explorer.exe %AppData%\\Microsoft\\Word\\STARTUP',
+              false,
+            )
+          "
+        >
+          Open Word Startup Folder
+        </button>
+        <button
+          onclick="
+            run_process(
+              'notepad.exe',
+              '%AppData%\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt',
+              false,
+            )
+          "
+        >
+          Open PSReadLine History
+        </button>
+        <button
+          onclick="
+            run_process(
+              'cmd.exe',
+              '/c explorer.exe %APPDATA%\\Microsoft\\Windows\\AccountPictures',
+              false,
+            )
+          "
+        >
+          Open Account Pictures Folder
+        </button>
+        <button
+          onclick="
+            run_process(
+              'cmd.exe',
+              '/c explorer.exe %ProgramData%\\Microsoft\\Windows\\Virtual Hard Disks',
+              false,
+            )
+          "
+        >
+          Open Virtual Disks Folder
+        </button>
+        <button
+          onclick="run_process('explorer.exe', 'shell:AppsFolder', false)"
+        >
+          Open Applications Folder
+        </button>
+        <button
+          onclick="
+            if (
+              confirm(
+                'This tool is provided by ThioJoe, and requires internet connection to work By continuing you agree to GPL 3.0 License.',
+              )
+            ) {
+              run_process(
+                'powershell',
+                '-Command irm https\://cdn.jsdelivr.net/gh/ThioJoe/Windows-Super-God-Mode@main/Super_God_Mode.ps1 | iex',
+                false,
+              );
+            }
+          "
+        >
+          Create Super God Mode Folder
+        </button>
+      </section>
+
+      <section>
+        <h2>Settings and Utilities:</h2>
+        <button
+          onclick="
+            run_process(
+              'explorer.exe',
+              'shell:::{ed7ba470-8e54-465e-825c-99712043e01c}',
+              false,
+            )
+          "
+        >
+          Open All Tasks/God Mode
+        </button>
+        <button
+          onclick="
+            run_process(
+              'explorer.exe',
+              'shell:::{6DFD7C5C-2451-11d3-A299-00C04F8EF6AF}',
+              false,
+            )
+          "
+        >
+          Open Folder Options
+        </button>
+        <button
+          onclick="
+            run_process(
+              'explorer.exe',
+              'shell:::{A3DD4F92-658A-410F-84FD-6FBBBEF2FFFE}',
+              false,
+            )
+          "
+        >
+          Open Internet Options
+        </button>
+        <button
+          onclick="
+            run_process(
+              'explorer.exe',
+              'shell:::{F2DDFC82-8F12-4CDD-B7DC-D4FE1425AA4D}',
+              false,
+            )
+          "
+        >
+          Open Sound Options
+        </button>
+        <button
+          onclick="
+            run_process(
+              'explorer.exe',
+              'shell:::{025A5937-A6BE-4686-A844-36FE4BEC8B6D}',
+              false,
+            )
+          "
+        >
+          Open Power Options
+        </button>
+        <button onclick="run_process('OptionalFeatures.exe', '', true)">
+          Open Optional Features
+        </button>
+        <button onclick="run_process('control.exe', '', false)">
+          Open Control Panel
+        </button>
+        <button onclick="window.location.href = 'ms-settings:'">
+          Open Settings
+        </button>
+        <button onclick="run_process('taskmgr.exe', '', true)">
+          Open Task Manager
+        </button>
+        <button onclick="run_process('taskmgr.exe', '-d', true)">
+          Open Task Manager (Windows 8 Style)
+        </button>
+
+        <button onclick="run_process('msconfig.exe', '', true)">
+          Open msconfig
+        </button>
+        <button
+          onclick="
+            run_process(
+              'explorer.exe',
+              'shell:::{ED834ED6-4B5A-4bfe-8F11-A626DCB6A921}',
+              false,
+            )
+          "
+        >
+          Open Personalization (Old Control Panel)
+        </button>
+        <button onclick="document.getElementById('dialog').showModal()">
+          Captive Portal / Public Wi-Fi Login Page
+        </button>
+        <button
+          onclick="
+            if (
+              confirm(
+                'This tool is provided by ThioJoe, and requires internet connection to work! By continuing you agree to GPL 3.0 License.',
+              )
+            ) {
+              fKeySender();
+            }
+          "
+        >
+          Open F Key Sender
+        </button>
+        <button
+          onclick="
+            if (
+              confirm(
+                'This tool is provided by ThioJoe, and requires internet connection to work! By continuing you agree to GPL 3.0 License.',
+              )
+            ) {
+              window.location.href = `https://thiojoe.github.io/Browser-Based-Tools`;
+            }
+          "
+        >
+          Open ThioJoe's Browser-Based-Tools
+        </button>
+        <button
+          onclick="
+            if (
+              confirm(
+                'This tool is provided by Chris Titus Tech, and requires internet connection to work! By continuing you agree to MIT License.',
+              )
+            ) {
+              run_process(
+                'powershell',
+                '-Command irm https\://christitus.com/win | iex',
+                true,
+              );
+            }
+          "
+        >
+          Open Chris Titus Tech's Windows Utility
+        </button>
+        <button onclick="run_process('winget', 'upgrade --all', true)">
+          Update Programs
+        </button>
+      </section>
+
+      <section>
+        <h2>Repair tools:</h2>
+        <button
+          onclick="
+            if (confirm('Do you want to shutdown your computer?')) {
+              run_process('shutdown', '/s /t 0', true);
+            }
+          "
+        >
+          Shutdown computer without fast startup
+        </button>
+        <button
+          onclick="
+            if (confirm('Do you want to reboot your computer?')) {
+              run_process('shutdown', '/r /t 0', true);
+            }
+          "
+        >
+          Restart Computer
+        </button>
+        <button
+          onclick="
+            if (
+              confirm(
+                'Do you want to reboot your computer to the firmware (UEFI)?',
+              )
+            ) {
+              run_process('shutdown', '/r /fw /t 0', true);
+            }
+          "
+        >
+          Reboot to Firmware (UEFI)
+        </button>
+        <button onclick="run_process('sfc', '/scannow', true)">
+          Repair System files
+        </button>
+        <button
+          onclick="
+            run_process('dism', '/online /cleanup-image /restorehealth', true)
+          "
+        >
+          Repair Windows Components
+        </button>
+        <button onclick="run_process('wsreset.exe', '', true)">
+          Reset Microsoft Store
+        </button>
+        <button onclick="run_process('ipconfig', '/flushdns', false)">
+          Clear DNS Cache
+        </button>
+        <button
+          onclick="
+            run_process(
+              'cmd.exe',
+              '/c net stop winnat && net start winnat',
+              true,
+            )
+          "
+        >
+          Restart Windows NAT Service
+        </button>
+        <button onclick="run_process('netsh', 'winsock reset', true)">
+          Reset Winsock Catalog
+        </button>
+        <button
+          onclick="
+            run_process('taskkill', '/F /FI status eq NOT RESPONDING', true)
+          "
+        >
+          Kill Not Responding Apps
+        </button>
+      </section>
+    </div>
+  </body>
+</html>
