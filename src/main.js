@@ -1,5 +1,6 @@
 const { invoke } = window.__TAURI__.core;
-async function run_process(program, args, elevated) {
+
+export async function run_process(program, args, elevated) {
   try {
     await invoke("run_process", {
       program,
@@ -10,7 +11,8 @@ async function run_process(program, args, elevated) {
     window.alert(`Error: ${error}`);
   }
 }
-async function fKeySender() {
+
+export async function fKeySender() {
   try {
     const url =
       "https://api.github.com/repos/ThioJoe/F-Key-Sender/releases/latest";
@@ -26,3 +28,6 @@ async function fKeySender() {
     window.alert(`Error fetching F-Key Sender download link: ${error}`);
   }
 }
+
+window.fKeySender = fKeySender;
+window.run_process = run_process;

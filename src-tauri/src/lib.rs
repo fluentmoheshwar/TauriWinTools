@@ -67,8 +67,8 @@ fn run_process(program: String, args: Option<String>, elevated: bool) -> std::re
             );
 
             if success.is_ok() {
-                CloseHandle(pi.hProcess);
-                CloseHandle(pi.hThread);
+                let _ = CloseHandle(pi.hProcess);
+                let _ = CloseHandle(pi.hThread);
                 Ok(())
             } else {
                 Err("Failed to launch normal process".into())
