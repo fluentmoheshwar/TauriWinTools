@@ -357,12 +357,18 @@
         >
           Reboot to Firmware (UEFI)
         </button>
-        <button onclick="run_process('sfc', '/scannow', true)">
+        <button
+          onclick="run_process('cmd.exe', '/k sfc /scannow && pause', true)"
+        >
           Repair System files
         </button>
         <button
           onclick="
-            run_process('dism', '/online /cleanup-image /restorehealth', true)
+            run_process(
+              'cmd.exe',
+              '/k dism /online /cleanup-image /restorehealth && pause',
+              true,
+            )
           "
         >
           Repair Windows Components
@@ -389,7 +395,11 @@
         </button>
         <button
           onclick="
-            run_process('taskkill', '/F /FI status eq NOT RESPONDING', true)
+            run_process(
+              'cmd.exe',
+              '/k taskkill /F /FI &quot;STATUS eq NOT RESPONDING&quot; && pause',
+              true,
+            )
           "
         >
           Kill Not Responding Apps
