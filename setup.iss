@@ -1,5 +1,5 @@
 #define AppName "TauriWinTools"
-#define AppVersion "0.1.0"
+#define AppVersion "1.0.0"
 #define AppPublisher "Moheshwar Amarnath Biswas"
 #define AppURL "https://github.com/fluentmoheshwar/TauriWinTools"
 #define AppExeName "tauriwintools.exe"
